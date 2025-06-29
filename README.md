@@ -1,13 +1,57 @@
-This script performs an end-to-end process for analyzing financial and operational KPI data:
+# 📊 Financial & Operational KPI Data Cleaning, Merging, Preparation & Trend Analysis Pipeline
 
-    Data loading and merging: Imports multiple Excel files containing financial and operational KPIs, merging them by the common date field to build a unified dataset.
+This project builds a comprehensive data pipeline that loads, merges, cleans, and analyzes financial and operational KPI data.  
+It performs advanced trend analysis on revenue, providing actionable insights for financial and operational performance monitoring.
 
-    Data cleaning and preparation: Standardizes column names, removes duplicates, sorts data chronologically, and fills missing values to ensure high data quality and consistency—critical for reliable analysis.
+---
 
-    Trend analysis on revenue KPI: Calculates Compound Annual Growth Rate (CAGR), Year-over-Year (YoY) growth rates, and applies linear regression to identify long-term trends.
+## 🎯 Key Objectives
 
-    Time series decomposition: Breaks down the revenue data into trend, seasonal, and residual components to uncover underlying patterns and irregularities.
+- Load and merge financial and operational KPI data by date.  
+- Clean and prepare the combined dataset: standardize column names, remove duplicates, sort chronologically, and fill missing values.  
+- Calculate key trend metrics on revenue, including Compound Annual Growth Rate (CAGR) and Year-over-Year (YoY) growth.  
+- Apply linear regression to identify long-term revenue trends and assess model fit (R²).  
+- Decompose the revenue time series into trend, seasonal, and residual components for deeper insights.  
+- Visualize revenue and decomposition components to support strategic decision-making.
 
-    Visualization: Presents comprehensive charts that depict revenue behavior and its components over time, supporting strategic decision-making.
+---
 
-This pipeline demonstrates practical skills in data integration, quality control, and financial time series analysis—key capabilities for roles focused on risk management and data-driven financial insights.
+## 📂 Expected Data Structure
+
+The data should include:
+
+| Column          | Description                         |
+|-----------------|-----------------------------------|
+| `date`          | Date (monthly or consistent format) |
+| `revenue`       | Revenue or main financial KPI     |
+| Operational KPIs| One or more operational metrics    |
+
+---
+
+## ▶️ Code Structure
+
+- **Data Loading:** Reads financial and operational KPI data.  
+- **Data Cleaning & Merging:** Standardizes, merges on `date`, removes duplicates, sorts, and fills missing values.  
+- **Trend Analysis Functions:**  
+  - CAGR calculation  
+  - YoY growth calculation  
+  - Linear regression for trend slope and R²  
+- **Time Series Decomposition:** Splits revenue into trend, seasonal, and residual components.  
+- **Visualization:** Plots revenue and decomposed components for interpretation.
+
+---
+
+## 🛠 Dependencies
+
+This project requires the following Python libraries:
+
+- pandas  
+- numpy  
+- scikit-learn  
+- statsmodels  
+- matplotlib
+
+You can install them using:
+
+```bash
+pip install pandas numpy scikit-learn statsmodels matplotlib
